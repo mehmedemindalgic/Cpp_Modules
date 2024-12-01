@@ -1,0 +1,17 @@
+NAME	= AAnimal
+
+CC		= c++
+FLAGS	= -Wall -Wextra -Werror -std=c++98
+RM		= rm -rf
+SRC		= AAnimal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp main.cpp
+all: $(NAME)
+
+$(NAME):
+	@ $(CC) $(FLAGS) $(SRC) -o $(NAME)
+
+clean:
+	@$(RM) $(NAME)
+
+re: clean all
+
+.PHONY: all clean re
